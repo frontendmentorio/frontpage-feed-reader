@@ -4,12 +4,8 @@
 /*
  * Tailwind CSS v4 Theme Configuration for Frontpage
  *
- * Replaces the v3 tailwind.config.js with CSS-first configuration.
  * Use this as your project's CSS entry point, or copy the @theme
  * blocks into your existing stylesheet.
- *
- * - Automatic content detection (no `content` array needed)
- * - Dark mode via prefers-color-scheme works by default
  */
 
 /*
