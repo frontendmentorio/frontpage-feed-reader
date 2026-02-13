@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Frontpage Sample Feeds</title>
+    <dateCreated>2026-02-12T00:00:00Z</dateCreated>
+    <docs>https://opml.org/spec2.opml</docs>
+  </head>
+  <body>
+    <!-- Frontend Development -->
+    <outline text="Frontend" title="Frontend">
+      <outline type="rss" text="CSS-Tricks" title="CSS-Tricks" xmlUrl="https://css-tricks.com/feed/" htmlUrl="https://css-tricks.com/" description="Tips, Tricks, and Techniques on using Cascading Style Sheets." />
+      <outline type="rss" text="Smashing Magazine" title="Smashing Magazine" xmlUrl="https://www.smashingmagazine.com/feed/" htmlUrl="https://www.smashingmagazine.com/" />
+      <outline type="rss" text="Josh W. Comeau" title="Josh W. Comeau" xmlUrl="https://www.joshwcomeau.com/rss.xml" htmlUrl="https://www.joshwcomeau.com/" />
+      <outline type="rss" text="Kent C. Dodds" title="Kent C. Dodds" xmlUrl="https://kentcdodds.com/blog/rss.xml" htmlUrl="https://kentcdodds.com/" />
+      <outline type="rss" text="web.dev" title="web.dev" xmlUrl="https://web.dev/feed.xml" htmlUrl="https://web.dev/" description="Building a better web, together." />
+      <outline type="rss" text="MDN Blog" title="MDN Blog" xmlUrl="https://developer.mozilla.org/en-US/blog/rss.xml" htmlUrl="https://developer.mozilla.org/en-US/blog/" />
+    </outline>
+
+    <!-- Design -->
+    <outline text="Design" title="Design">
+      <outline type="rss" text="Sidebar.io" title="Sidebar.io" xmlUrl="https://sidebar.io/feed.xml" htmlUrl="https://sidebar.io/" description="The five best design links, every day." />
+      <outline type="rss" text="Nielsen Norman Group" title="Nielsen Norman Group" xmlUrl="https://www.nngroup.com/feed/rss/" htmlUrl="https://www.nngroup.com/" />
+      <outline type="rss" text="Figma Blog" title="Figma Blog" xmlUrl="https://www.figma.com/blog/feed/" htmlUrl="https://www.figma.com/blog/" />
+      <outline type="rss" text="A List Apart" title="A List Apart" xmlUrl="https://alistapart.com/main/feed/" htmlUrl="https://alistapart.com/" description="For people who make websites." />
+      <outline type="rss" text="UX Collective" title="UX Collective" xmlUrl="https://uxdesign.cc/feed" htmlUrl="https://uxdesign.cc/" />
+    </outline>
+
+    <!-- Backend & DevOps -->
+    <outline text="Backend &amp; DevOps" title="Backend &amp; DevOps">
+      <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="https://blog.cloudflare.com/" />
+      <outline type="rss" text="Vercel Blog" title="Vercel Blog" xmlUrl="https://vercel.com/atom" htmlUrl="https://vercel.com/blog" description="Vercel's official blog — Atom format" />
+      <outline type="rss" text="The GitHub Blog" title="The GitHub Blog" xmlUrl="https://github.blog/feed/" htmlUrl="https://github.blog/" />
+      <outline type="rss" text="Netlify Blog" title="Netlify Blog" xmlUrl="https://www.netlify.com/blog/index.xml" htmlUrl="https://www.netlify.com/blog/" />
+    </outline>
+
+    <!-- General Tech -->
+    <outline text="General Tech" title="General Tech">
+      <outline type="rss" text="The Pragmatic Engineer" title="The Pragmatic Engineer" xmlUrl="https://blog.pragmaticengineer.com/rss/" htmlUrl="https://blog.pragmaticengineer.com/" />
+      <outline type="rss" text="Hacker News Best" title="Hacker News Best" xmlUrl="https://hnrss.org/best" htmlUrl="https://news.ycombinator.com/" description="Hacker News best stories — high volume feed" />
+    </outline>
+
+    <!-- AI & Machine Learning -->
+    <outline text="AI &amp; ML" title="AI &amp; ML">
+      <outline type="rss" text="Simon Willison's Weblog" title="Simon Willison's Weblog" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/" description="Atom format feed with full content" />
+      <outline type="rss" text="Hugging Face Blog" title="Hugging Face Blog" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog" />
+    </outline>
+
+    <!-- Edge Cases: Intentional problems for robust parsing -->
+
+    <!-- Duplicate entry — same feed as above with slightly different attributes -->
+    <outline type="rss" text="Simon Willison" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/" />
+
+    <!-- Dead feed — URL that will 404 -->
+    <outline type="rss" text="Defunct Tech Blog" title="Defunct Tech Blog" xmlUrl="https://example.com/this-feed-does-not-exist.xml" htmlUrl="https://example.com/" description="This feed URL is intentionally dead for error handling testing." />
+
+    <!-- Feed URL without type attribute -->
+    <outline text="web.dev (no type)" xmlUrl="https://web.dev/feed.xml" htmlUrl="https://web.dev/" />
+
+    <!-- Feed using xmlurl (lowercase) instead of xmlUrl -->
+    <outline type="rss" text="CSS-Tricks (alt attr)" xmlurl="https://css-tricks.com/feed/" htmlurl="https://css-tricks.com/" />
+
+    <!-- Deeply nested OPML structure -->
+    <outline text="Nested Category">
+      <outline text="Subcategory">
+        <outline type="rss" text="Smashing (nested)" xmlUrl="https://www.smashingmagazine.com/feed/" htmlUrl="https://www.smashingmagazine.com/" />
+      </outline>
+    </outline>
+
+    <!-- Entry with minimal attributes -->
+    <outline xmlUrl="https://blog.cloudflare.com/rss/" />
+
+  </body>
+</opml>
