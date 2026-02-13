@@ -23,7 +23,7 @@ Read these files to understand what needs to be built:
 | `guidance/patterns.md` | UI/UX patterns and anti-patterns |
 | `guidance/accessibility.md` | WCAG compliance checklist |
 | `starter/tokens.css` | CSS custom properties matching the brand kit |
-| `starter/tailwind.config.js` | Optional Tailwind configuration |
+| `starter/tailwind.css` | Optional Tailwind v4 CSS-first configuration |
 | `data/sample-feeds.json` | Curated feeds for the guest experience |
 | `data/sample-feeds.opml` | OPML file for import testing (includes edge cases) |
 | `data/README.md` | Documents all data edge cases |
