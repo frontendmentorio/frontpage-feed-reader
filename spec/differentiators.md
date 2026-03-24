@@ -8,30 +8,7 @@ Document your choice, implementation approach, and what you learned in your READ
 
 ---
 
-## 1. Keyboard-First Navigation
-
-**Skill area:** Frontend craft / UX innovation
-
-Build a comprehensive keyboard shortcut system that makes Frontpage fast and fluid for power users.
-
-**What to build:**
-
-- `j` / `k` to move between items in the feed list
-- `o` or `Enter` to open the selected item
-- `s` to save/bookmark the selected item
-- `m` to toggle read/unread on the selected item
-- `g` then `h` for go home, `g` then `s` for saved, `g` then `f` for feeds (vim-style compound shortcuts)
-- `/` to focus search
-- `?` to show keyboard shortcut reference
-- Command palette (Cmd/Ctrl + K) for quick actions: switch category, go to feed, search, change layout
-- Visual focus indicator showing which item is currently selected
-- Works seamlessly alongside mouse/touch interaction
-
-**Why this is impressive:** Keyboard-first interfaces signal deep attention to UX craft. It's the kind of detail that makes power users fall in love with a product — and it's technically interesting to implement well (focus management, scroll-into-view, conflict with browser shortcuts).
-
----
-
-## 2. AI-Powered Summarization
+## 1. AI-Powered Summarization
 
 **Skill area:** AI integration
 
@@ -49,7 +26,7 @@ Use AI to help users process more content in less time.
 
 ---
 
-## 3. Offline Reading Support
+## 2. Offline Reading Support
 
 **Skill area:** Performance / PWA
 
@@ -69,7 +46,7 @@ Cache articles for offline access so users can read on the go.
 
 ---
 
-## 4. Newsletter Email Integration
+## 3. Newsletter Email Integration
 
 **Skill area:** Backend complexity
 
@@ -88,7 +65,7 @@ Provide a unique email address that converts incoming newsletters into feed item
 
 ---
 
-## 5. Reading Analytics
+## 4. Reading Analytics
 
 **Skill area:** Data visualization
 
@@ -108,7 +85,7 @@ Track reading habits and present insightful data about consumption patterns.
 
 ---
 
-## 6. Accessibility-First Reading
+## 5. Accessibility-First Reading
 
 **Skill area:** Accessibility
 

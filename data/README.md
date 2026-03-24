@@ -7,7 +7,7 @@
 | `sample-feeds.opml` | OPML 2.0 | Standard subscription import file — use for OPML import testing |
 | `sample-feeds.json` | JSON | Same feeds in a more developer-friendly format — use for seeding the guest experience |
 
-Both files contain the same set of curated feeds plus intentional edge cases.
+Both files contain the same 19 curated feeds. The OPML file includes additional format-specific edge cases (missing attributes, nesting variations, lowercase attribute names) that don't apply to JSON.
 
 ## Curated Feeds (19 feeds across 5 categories)
 
@@ -91,7 +91,7 @@ Use `sample-feeds.json` to seed the guest dashboard. The 19 unique feeds across 
 Use `sample-feeds.opml` to test your import flow. It includes all the happy-path feeds plus the edge cases listed above. A robust import should:
 
 - Successfully import the 19 unique, valid feeds
-- Detect and skip 5 duplicates — most edge case entries reuse URLs from the categorized feeds above, so they test both the edge case (e.g. lowercase attributes) and duplicate detection
+- Detect and skip duplicates — some edge case entries reuse URLs from the categorized feeds above, so they test both the edge case (e.g. lowercase attributes) and duplicate detection
 - Report 1 dead feed (with helpful error message)
 - Handle 1 entry with missing type attribute
 - Handle 1 entry with lowercase attribute names

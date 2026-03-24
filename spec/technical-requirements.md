@@ -17,11 +17,14 @@ Use a real database service — not localStorage or in-memory storage.
 - Bookmarks per user
 - User preferences (layout, refresh interval, categories, ordering)
 
-**Considerations:**
+**Things to think about:**
 
-- Design your schema for efficient querying — you'll be filtering items by feed, category, read state, date range, and search terms
-- Plan for growth: a user with 50 feeds averaging 20 items each = 1,000+ items to manage
-- Think about when to fetch feed items (on demand vs. background) and how to avoid duplicate items on re-fetch
+- How will you query items by feed AND by category AND by date range efficiently? What indexes do these access patterns require?
+- What happens when a feed is deleted — what related data needs cleanup (items, read state, bookmarks)?
+- How will you handle a user with 50 feeds averaging 20 items each = 1,000+ items to manage? What about 100 feeds?
+- When should you fetch feed items (on demand vs. background) and how do you avoid duplicate items on re-fetch?
+- How will you store read/unread state per user per item without the table growing unboundedly?
+- What's your strategy for feed item deduplication when the same item appears in a re-fetch with slightly different content?
 
 ## Authentication
 
@@ -62,7 +65,7 @@ RSS feeds cannot be fetched directly from the browser due to CORS restrictions. 
 
 Deploy to a live, publicly accessible URL.
 
-**Recommended platforms:** Vercel, Netlify, Cloudflare Pages, Railway, Fly.io, or equivalent.
+**Recommended platforms:** Vercel, Netlify, Render, Fly.io, or equivalent.
 
 **Requirements:**
 
@@ -82,6 +85,18 @@ Deploy to a live, publicly accessible URL.
 | Individual feed refresh | < 5 seconds |
 | Layout shift during load | Minimal (use skeletons/placeholders) |
 
+### Lighthouse Benchmarks
+
+Run Lighthouse on your deployed site. Target scores:
+
+| Category | Target |
+|----------|--------|
+| Performance | > 85 |
+| Accessibility | > 90 |
+| Best Practices | > 90 |
+
+Include your Lighthouse scores in your README.
+
 ## Technology Choice
 
 This challenge is **framework-agnostic**. Use whatever you're most productive with.
@@ -92,7 +107,7 @@ This challenge is **framework-agnostic**. Use whatever you're most productive wi
 - React, Vue, Svelte, Solid (with separate backend)
 - Any other approach that meets the requirements
 
-The starter files provide CSS custom properties and a Tailwind config, but neither CSS nor Tailwind is required. Use whatever styling approach you prefer.
+The starter files provide CSS custom properties and a Tailwind v4 config, but neither CSS nor Tailwind is required. Use whatever styling approach you prefer.
 
 ## Frontend-Only Alternative
 

@@ -1,18 +1,6 @@
 @import "tailwindcss";
 @import "./tokens.css";
 
-/*
- * Tailwind CSS v4 Theme Configuration for Frontpage
- *
- * Use this as your project's CSS entry point, or copy the @theme
- * blocks into your existing stylesheet.
- */
-
-/*
- * Dynamic values — reference tokens.css custom properties so dark mode
- * overrides work at runtime. @theme inline generates utility classes
- * without creating duplicate CSS custom properties.
- */
 @theme inline {
   --color-bg-primary: var(--color-bg-primary);
   --color-bg-secondary: var(--color-bg-secondary);
@@ -36,16 +24,11 @@
   --shadow-lg: var(--shadow-lg);
 }
 
-/*
- * Static values — same in light and dark modes.
- */
 @theme {
-  /* Font Families */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Georgia", "Charter", serif;
   --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
 
-  /* Font Sizes (with associated line heights) */
   --text-xs: 0.6875rem;
   --text-xs--line-height: 1.45;
   --text-sm: 0.8125rem;
@@ -61,19 +44,21 @@
   --text-3xl: 2.4375rem;
   --text-3xl--line-height: 1.2;
 
-  /* Spacing — 4px base unit (p-1 = 4px, p-4 = 16px, etc.) */
+  --font-weight-regular: var(--font-regular);
+  --font-weight-medium: var(--font-medium);
+  --font-weight-semibold: var(--font-semibold);
+  --font-weight-bold: var(--font-bold);
+
   --spacing: 0.25rem;
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999rem;
 
-  /* Layout */
-  --spacing-sidebar: 260px;
-  --container-content: 720px;
-  --container-feed: 960px;
-  --container-page: 1280px;
+  --spacing-sidebar: 16.25rem;
+  --container-content: 45rem;
+  --container-feed: 60rem;
+  --container-page: 80rem;
 }

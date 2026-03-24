@@ -11,11 +11,17 @@
 
 This is a tool for people who read for a living. It should feel like a well-organized desk, not a social media feed.
 
-## Design References
+## Design Inspiration
 
-- **Feedly** — Content organization patterns, feed management UX, category navigation
-- **Linear** — Information density, clean typography, keyboard-first feel, subtle use of color
-- **Instapaper / Matter** — Reading-focused, calm, content-first, beautiful typography
+Explore these products for inspiration — they solve similar problems with different design approaches:
+
+- [Feedly](https://feedly.com) — Clean, magazine-style layout with strong visual hierarchy. Draw from: content organization patterns, feed management UX, category navigation.
+- [Linear](https://linear.app) — Crisp, high-density interface with confident typography. Draw from: information density, keyboard-first feel, subtle use of color for status and navigation.
+- [Inoreader](https://www.inoreader.com) — Dense, information-rich interface favoring power users. Draw from: keyboard navigation patterns, power-user-oriented feed management, flexible view modes.
+- [Instapaper](https://www.instapaper.com) — Reading-focused, calm, content-first. Draw from: beautiful typography, distraction-free reading experience, serene content presentation.
+- [Readwise Reader](https://readwise.io/read) — Minimal, modern read-later app with a calm aesthetic. Draw from: clean reading view, annotation patterns, the balance between content density and breathing room.
+
+There's no single right design for Frontpage. These examples show the range of valid approaches — from dense and data-rich to minimal and reading-focused. If you're going in your own design direction, spend some time exploring other RSS readers and content aggregators to build your own reference library before you start building.
 
 The `preview.jpg` in the repo root shows these tokens applied to Frontpage's main feed view. Use it as a reference for how the brand kit comes together — it's a concept image, not a pixel-perfect spec.
 
@@ -90,6 +96,18 @@ Based on a 1.25 ratio (major third), anchored at 16px body.
 | `--text-2xl` | 31px / 1.9375rem | 600 | 1.25 | Hero heading, landing page |
 | `--text-3xl` | 39px / 2.4375rem | 700 | 1.2 | Landing page hero (large screens) |
 
+### Line Heights
+
+| Token | Value | Used with |
+|-------|-------|-----------|
+| `--leading-tight` | 1.2 | `--text-3xl` |
+| `--leading-snug` | 1.3 | `--text-xl` |
+| `--leading-normal` | 1.4 | `--text-lg` |
+| `--leading-relaxed` | 1.45 | `--text-xs`, `--text-sm` |
+| `--leading-loose` | 1.55 | `--text-base` |
+
+The type scale table above shows which line height each text size uses. In `tokens.css`, line heights are independent custom properties — pair them with text sizes as shown, or adjust as needed.
+
 ### Font Weights
 
 | Token | Weight | Usage |
@@ -121,11 +139,11 @@ Based on a 4px base unit.
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--radius-sm` | 4px | Small elements, badges, tags |
-| `--radius-md` | 8px | Buttons, inputs, small cards |
-| `--radius-lg` | 12px | Cards, panels, modals |
-| `--radius-xl` | 16px | Large cards, feature sections |
-| `--radius-full` | 9999px | Avatars, circular elements |
+| `--radius-sm` | 0.25rem | Small elements, badges, tags |
+| `--radius-md` | 0.5rem | Buttons, inputs, small cards |
+| `--radius-lg` | 0.75rem | Cards, panels, modals |
+| `--radius-xl` | 1rem | Large cards, feature sections |
+| `--radius-full` | 9999rem | Avatars, circular elements |
 
 ## Shadows
 
@@ -167,10 +185,10 @@ Ship a custom favicon. It's a small detail that makes the product feel real. An 
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--sidebar-width` | 260px | Navigation sidebar |
-| `--content-max-width` | 720px | Reader view, article content |
-| `--feed-max-width` | 960px | Feed list view |
-| `--page-max-width` | 1280px | Overall page container |
+| `--sidebar-width` | 16.25rem | Navigation sidebar |
+| `--content-max-width` | 45rem | Reader view, article content |
+| `--feed-max-width` | 60rem | Feed list view |
+| `--page-max-width` | 80rem | Overall page container |
 
 ## Key Screens for Design Quality
 

@@ -1,6 +1,14 @@
 # Core Requirements
 
-These 17 features are fully specified with acceptance criteria. The remaining features (content discovery & onboarding, digest view, layout customization) are design challenges where you make the product decisions.
+These features are organized into two tiers. **Core** gives you a complete, impressive product. **Stretch** takes it to the next level. The remaining features (content discovery & onboarding, digest view, layout customization) are design challenges where you make the product decisions — see `design-challenges.md`.
+
+Completing Core + a design-it-yourself feature + a differentiator is a strong portfolio piece.
+
+---
+
+# Core
+
+These 12 features form a complete feed reader. A fully working product with authentication, guest access, and a polished landing page.
 
 ---
 
@@ -103,7 +111,106 @@ Let users read or access the full article.
 
 ---
 
-## 7. Bookmarks / Save for Later
+## 7. Responsive Design
+
+The app works well across devices.
+
+**Acceptance criteria:**
+
+- The layout adapts naturally across screen sizes — let your content dictate the breakpoints rather than targeting specific pixel values
+- On smaller screens: single-column layout, collapsible navigation, touch-friendly tap targets
+- On larger screens: take advantage of the space — consider how navigation, content, and reading can coexist
+- No horizontal scrolling
+- Navigation is accessible and usable on all screen sizes
+- Font sizes and spacing are comfortable for reading on each device class
+- Images and media in feed content are responsive
+
+---
+
+## 8. Feed Error Handling
+
+Gracefully handle the reality of unreliable feeds.
+
+**Acceptance criteria:**
+
+- Show clear error state for feeds that fail to fetch (network error, timeout, 404, 500)
+- Distinguish between temporary errors and permanently dead feeds
+- Retry failed feeds with exponential backoff
+- Show last successful fetch time even when current fetch fails
+- Don't block the entire UI when one feed is slow or broken
+- Allow users to manually retry a failed feed
+- Show a feed health dashboard or indicator (how many feeds are healthy vs. erroring)
+
+---
+
+## 9. User Authentication
+
+Secure, personal experience.
+
+**Acceptance criteria:**
+
+- Sign up with email and password
+- Sign in / sign out
+- Password reset flow
+- Persist all user data (feeds, categories, read state, bookmarks, preferences) per account
+- Auth state persists across browser sessions
+- Protected routes redirect unauthenticated users to sign-in
+- Guest mode allows full exploration without an account (see "Try as Guest" requirements)
+
+---
+
+## 10. Landing Page
+
+The first impression and entry point.
+
+**Acceptance criteria:**
+
+- Hero section with clear, compelling value proposition
+- 3-4 feature highlights that communicate what makes Frontpage useful
+- Dual CTAs: "Sign Up" and "Try as Guest" — both prominent
+- Responsive design that works well on mobile through desktop
+- Visual quality that sets the professional tone for the entire product
+- Fast load time (no heavy assets blocking render)
+
+---
+
+## 11. "Try as Guest" Experience
+
+Visitors can explore the full app without creating an account. This is critical for portfolio value — when a hiring manager, colleague, or community member clicks your deployed link, they're not going to create an account. Guest mode is what lets them see your work.
+
+**Acceptance criteria:**
+
+- Single click from landing page enters guest mode
+- Dashboard is pre-loaded with the 19 curated feeds across 5 categories (see `data/` files)
+- Guest sees a fully populated dashboard with real content, organized by category
+- Guest can browse, search, and switch layouts
+- Gentle prompts to sign up to save their data (not aggressive gating)
+- Guest data is session-based (not persisted across visits unless they sign up)
+- Clear messaging about what signing up unlocks (persistence, custom feeds, sync)
+
+---
+
+## 12. Data Persistence
+
+All user data stored in a real database.
+
+**Acceptance criteria:**
+
+- Use a real database service (Supabase, Firebase, Neon, PlanetScale, etc.)
+- Store: feed subscriptions, categories, feed items, read state, bookmarks, user preferences
+- Data persists across sessions and devices for authenticated users
+- Efficient queries — don't fetch all items when only showing one category
+- Handle concurrent updates gracefully (multiple tabs, optimistic updates)
+
+---
+
+# Stretch
+
+These 6 features take the product to the next level. They build on the Core foundation and are recommended for developers who want to go deeper.
+
+---
+
+## 13. Bookmarks / Save for Later
 
 Save articles to a persistent reading list.
 
@@ -119,7 +226,7 @@ Save articles to a persistent reading list.
 
 ---
 
-## 8. Search
+## 14. Search
 
 Find content across all feeds.
 
@@ -134,7 +241,7 @@ Find content across all feeds.
 
 ---
 
-## 9. OPML Import/Export
+## 15. OPML Import/Export
 
 Support the standard feed subscription format.
 
@@ -151,39 +258,7 @@ Support the standard feed subscription format.
 
 ---
 
-## 10. Responsive Design
-
-The app works well across devices.
-
-**Acceptance criteria:**
-
-- Mobile (320px–767px): Single-column layout, touch-friendly tap targets, collapsible navigation
-- Tablet (768px–1023px): Adapted layout with optional sidebar
-- Desktop (1024px+): Full layout with sidebar navigation, content area, and optional reading pane
-- No horizontal scrolling at any breakpoint
-- Navigation is accessible and usable on all screen sizes
-- Font sizes and spacing are comfortable for reading on each device class
-- Images and media in feed content are responsive
-
----
-
-## 11. Feed Error Handling
-
-Gracefully handle the reality of unreliable feeds.
-
-**Acceptance criteria:**
-
-- Show clear error state for feeds that fail to fetch (network error, timeout, 404, 500)
-- Distinguish between temporary errors and permanently dead feeds
-- Retry failed feeds with exponential backoff
-- Show last successful fetch time even when current fetch fails
-- Don't block the entire UI when one feed is slow or broken
-- Allow users to manually retry a failed feed
-- Show a feed health dashboard or indicator (how many feeds are healthy vs. erroring)
-
----
-
-## 12. Refresh and Polling
+## 16. Refresh and Polling
 
 Keep content fresh.
 
@@ -199,54 +274,7 @@ Keep content fresh.
 
 ---
 
-## 13. User Authentication
-
-Secure, personal experience.
-
-**Acceptance criteria:**
-
-- Sign up with email and password
-- Sign in / sign out
-- Password reset flow
-- Persist all user data (feeds, categories, read state, bookmarks, preferences) per account
-- Auth state persists across browser sessions
-- Protected routes redirect unauthenticated users to sign-in
-- Guest mode allows full exploration without an account (see "Try as Guest" requirements)
-
----
-
-## 14. Landing Page
-
-The first impression and entry point.
-
-**Acceptance criteria:**
-
-- Hero section with clear, compelling value proposition
-- 3-4 feature highlights that communicate what makes Frontpage useful
-- Dual CTAs: "Sign Up" and "Try as Guest" — both prominent
-- Responsive design that works well on mobile through desktop
-- Visual quality that sets the professional tone for the entire product
-- Fast load time (no heavy assets blocking render)
-
----
-
-## 15. "Try as Guest" Experience
-
-Visitors can explore the full app without creating an account. This is critical for portfolio value — when a hiring manager, colleague, or community member clicks your deployed link, they're not going to create an account. Guest mode is what lets them see your work.
-
-**Acceptance criteria:**
-
-- Single click from landing page enters guest mode
-- Dashboard is pre-loaded with 15-20 curated feeds across categories (see `data/` files)
-- Guest sees a fully populated dashboard with real content, organized by category
-- Guest can browse, search, bookmark, and switch layouts
-- Gentle prompts to sign up to save their data (not aggressive gating)
-- Guest data is session-based (not persisted across visits unless they sign up)
-- Clear messaging about what signing up unlocks (persistence, custom feeds, sync)
-
----
-
-## 16. Performance
+## 17. Performance
 
 The app must feel fast and responsive.
 
@@ -262,14 +290,20 @@ The app must feel fast and responsive.
 
 ---
 
-## 17. Data Persistence
+## 18. Keyboard Navigation
 
-All user data stored in a real database.
+A comprehensive keyboard shortcut system that makes the app fast and fluid for power users.
 
 **Acceptance criteria:**
 
-- Use a real database service (Supabase, Firebase, Neon, PlanetScale, etc.)
-- Store: feed subscriptions, categories, feed items, read state, bookmarks, user preferences
-- Data persists across sessions and devices for authenticated users
-- Efficient queries — don't fetch all items when only showing one category
-- Handle concurrent updates gracefully (multiple tabs, optimistic updates)
+- `j` / `k` to move between items in the feed list
+- `o` or `Enter` to open the selected item
+- `s` to save/bookmark the selected item (if bookmarks are implemented)
+- `m` to toggle read/unread on the selected item
+- `g` then `h` for go home, `g` then `s` for saved, `g` then `f` for feeds (vim-style compound shortcuts)
+- `/` to focus search (if search is implemented)
+- `?` to show keyboard shortcut reference overlay
+- Command palette (Cmd/Ctrl + K) for quick actions: switch category, go to feed, search, change layout
+- Visual focus indicator showing which item is currently selected
+- Scroll selected item into view automatically
+- Works seamlessly alongside mouse/touch interaction — keyboard and pointer don't conflict

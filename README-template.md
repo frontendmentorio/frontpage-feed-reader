@@ -149,6 +149,7 @@ Rate your implementation honestly. This self-awareness is part of the portfolio 
 |----------|--------|-------|
 | **Works for real users** — Deployed, functional end-to-end | /5 | |
 | **Feed parsing robustness** — Handles format variations, errors, edge cases | /5 | |
+| **Design-it-yourself features** — Quality and thoughtfulness of onboarding, digest, and layout solutions | /5 | |
 | **Design quality** — Typography, spacing, visual hierarchy, polish | /5 | |
 | **Responsive design** — Fully functional and well-designed across devices | /5 | |
 | **Performance** — Fast load, smooth scrolling, efficient caching | /5 | |
@@ -157,6 +158,17 @@ Rate your implementation honestly. This self-awareness is part of the portfolio 
 | **Code quality** — Clean, maintainable, well-structured | /5 | |
 | **Landing page** — Compelling, communicates value, visually polished | /5 | |
 | **Guest experience** — Immediately impressive, real content, full features | /5 | |
+
+### Lighthouse Scores
+
+<!-- Run Lighthouse on your deployed site and record the scores -->
+
+| Category | Score |
+|----------|-------|
+| Performance | |
+| Accessibility | |
+| Best Practices | |
+| SEO | |
 
 ### Strengths
 

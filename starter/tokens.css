@@ -1,9 +1,4 @@
-/* Frontpage Design Tokens */
-/* These CSS custom properties match the brand kit. */
-/* Use them directly or adapt to your preferred styling approach. */
-
 :root {
-  /* Colors — Light Mode */
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f8f9fa;
   --color-bg-tertiary: #f1f3f5;
@@ -25,18 +20,17 @@
 
   --color-unread-indicator: #2563eb;
 
-  /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Georgia', 'Charter', serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 
-  --text-xs: 0.6875rem;     /* 11px */
-  --text-sm: 0.8125rem;     /* 13px */
-  --text-base: 1rem;        /* 16px */
-  --text-lg: 1.25rem;       /* 20px */
-  --text-xl: 1.5625rem;     /* 25px */
-  --text-2xl: 1.9375rem;    /* 31px */
-  --text-3xl: 2.4375rem;    /* 39px */
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.9375rem;
+  --text-3xl: 2.4375rem;
 
   --leading-tight: 1.2;
   --leading-snug: 1.3;
@@ -49,39 +43,34 @@
   --font-semibold: 600;
   --font-bold: 700;
 
-  /* Spacing (4px base) */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999rem;
 
-  /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
 
-  /* Layout */
-  --sidebar-width: 260px;
-  --content-max-width: 720px;
-  --feed-max-width: 960px;
-  --page-max-width: 1280px;
+  --sidebar-width: 16.25rem;
+  --content-max-width: 45rem;
+  --feed-max-width: 60rem;
+  --page-max-width: 80rem;
 }
 
-/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg-primary: #0d1117;
