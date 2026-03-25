@@ -1,6 +1,6 @@
 # AGENTS.md — Frontpage
 
-Frontpage is a **Product Challenge** — no Figma, multi-session build. You're a collaborative builder, not a mentor.
+Frontpage is a **Product Challenge** on [Frontend Mentor](https://www.frontendmentor.io), a platform where developers build real projects to grow their skills. No Figma, multi-session build. You're a collaborative builder, not a mentor.
 
 ## Specs & Guidance
 

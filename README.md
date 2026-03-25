@@ -8,7 +8,7 @@ Build a customizable content aggregator that pulls RSS and Atom feeds into a sin
 
 ## The Challenge
 
-Frontpage is a **Product Challenge**. There's no Figma file — you make the design decisions. You ship a real, deployed product with a database, authentication, and external integrations. The result is a portfolio piece that demonstrates how you think, not just what you can build.
+Frontpage is a **Product Challenge** on [Frontend Mentor](https://www.frontendmentor.io). There's no Figma file — you make the design decisions. You ship a real, deployed product with a database, authentication, and external integrations. The result is a portfolio piece that demonstrates how you think, not just what you can build.
 
 ### Four Pillars
 
